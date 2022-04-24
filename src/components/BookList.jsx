@@ -13,7 +13,8 @@ class BookList extends React.Component {
             <Container>
                 <Row>
                     <Col>
-                        <Form.Group controlId="formBasicEmail">
+                        {/* This is the search field */}
+                       { <Form.Group controlId="formBasicEmail">
                             <Form.Label>Search</Form.Label>
                             <Form.Control
                                 type="text"
@@ -21,7 +22,7 @@ class BookList extends React.Component {
                                 value={this.state.searchQuery}
                                 onChange={e => this.setState({ searchQuery: e.target.value })}
                             />
-                        </Form.Group>
+                        </Form.Group>}
                     </Col>
                 </Row>
                 <Row>
