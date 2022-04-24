@@ -1,6 +1,6 @@
 import { Component } from "react";
 import CommentsList from "./CommentList";
-
+import AddComment from "./AddComment";
 const options = {
     method: "GET",
     headers: {
@@ -27,11 +27,13 @@ componentDidMount = async () => {
 
     render() {
         return (
-            <div>
+           <div>
                 {<CommentsList commentsToShow={this.state.comments}/>}
+                
                 {/* <h1 style={{color: "red"}}>COMMENT!§</h1> */}
-            </div>
-        )
+                {<AddComment asin={this.props.asin}/>}
+                </div>
+            )
     }
 }
 
